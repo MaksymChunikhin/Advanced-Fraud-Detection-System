@@ -104,7 +104,7 @@ Baseline ROC-AUC:
 | --- | ---: |
 | XGBoost | 0.92631 |
 | LightGBM | 0.92463 |
-| CatBoost | 0.89642 |
+| CatBoost | 0.89900 |
 | Logistic Regression | 0.81995 |
 
 After Optuna tuning:
@@ -113,7 +113,7 @@ After Optuna tuning:
 | --- | ---: | ---: | ---: |
 | LightGBM | 0.92463 | **0.93797** | +0.01334 |
 | XGBoost | 0.92631 | 0.93580 | +0.00949 |
-| CatBoost | 0.89642 | 0.92802 | +0.03160 |
+| CatBoost | 0.89900 | 0.92802 | +0.02902 |
 
 The three gradient-boosting models clearly outperform logistic regression, indicating strong
 non-linear relationships in the data.
