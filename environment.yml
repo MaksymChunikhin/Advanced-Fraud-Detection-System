@@ -1,0 +1,32 @@
+# Fraud Detection — conda environment (GPU, WSL2 Ubuntu, RTX 3090)
+# Создание / create:  conda env create -f environment.yml
+# Ядро в VS Code / VS Code kernel:  fraud (Python 3.10)
+#
+# GPU-замечания / GPU notes:
+#   - lightgbm ставится из conda-forge как CUDA-сборка (cuda_py*) -> device="cuda".
+#     pip-версия lightgbm идёт БЕЗ CUDA, поэтому именно conda-forge.
+#   - xgboost: device="cuda";  catboost: task_type="GPU".
+name: fraud
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - lightgbm=4.6.0=cuda_py*      # GPU (CUDA backend)
+  - pandas=3.0.2
+  - numpy=2.4.4
+  - scipy=1.17.1
+  - scikit-learn=1.8.0
+  - matplotlib
+  - seaborn
+  - pyarrow
+  - joblib
+  - ipykernel
+  - pip:
+      - xgboost==3.2.0
+      - catboost==1.2.10
+      - optuna==4.8.0
+      - shap==0.51.0
+      # App — real-time dashboard / Приложение — дашборд
+      - streamlit==1.57.0
+      - plotly==6.6.0

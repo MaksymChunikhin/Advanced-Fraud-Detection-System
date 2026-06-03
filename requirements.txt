@@ -1,0 +1,41 @@
+# Fraud Detection — pip requirements
+# ----------------------------------------------------------------------------
+# Установка / install:
+#     python -m venv .venv && source .venv/bin/activate
+#     pip install -r requirements.txt
+#
+# Версии зафиксированы под реально работающее окружение (Python 3.10).
+# Versions pinned to the actually-working environment (Python 3.10).
+#
+# GPU-замечание / GPU note:
+#   - LightGBM в проекте считается на CPU, поэтому pip-сборки (без CUDA) достаточно.
+#     LightGBM runs on CPU here, so the CPU-only pip wheel is fine.
+#   - XGBoost и CatBoost из pip уже включают поддержку CUDA (device="cuda" / task_type="GPU").
+#   - Для conda-окружения с GPU-сборкой LightGBM смотри environment.yml.
+# ----------------------------------------------------------------------------
+
+# Core data / Базовые данные
+pandas==3.0.2
+numpy==2.4.4
+scipy==1.17.1
+pyarrow==24.0.0
+joblib==1.5.3
+
+# Machine learning / Машинное обучение
+scikit-learn==1.8.0
+lightgbm==4.6.0
+xgboost==3.2.0
+catboost==1.2.10
+optuna==4.8.0
+shap==0.51.0
+
+# Visualization / Визуализация
+matplotlib==3.10.9
+seaborn==0.13.2
+plotly==6.6.0
+
+# App — real-time dashboard / Приложение — дашборд
+streamlit==1.57.0
+
+# Notebooks / Ноутбуки
+ipykernel==7.2.0
