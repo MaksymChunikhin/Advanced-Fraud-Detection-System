@@ -1,5 +1,7 @@
 # IEEE-CIS Fraud Detection
 
+**English** | [Русский](README.ru.md)
+
 ![Python](https://img.shields.io/badge/Python-3.10-3776AB?logo=python&logoColor=white)
 ![LightGBM](https://img.shields.io/badge/LightGBM-tuned-success)
 ![Streamlit](https://img.shields.io/badge/Streamlit-dashboard-FF4B4B?logo=streamlit&logoColor=white)
